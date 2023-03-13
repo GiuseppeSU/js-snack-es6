@@ -13,6 +13,7 @@ const squadre = [
     },
 ];
 
+
 function randomNum(min, max) {
     return Math.floor(Math.random() * (max-min)) + min;
 }
@@ -22,9 +23,10 @@ for(let s in squadre) {
     squadre[s].punti_fatti = randomNum(1, 10);
 }
 
-console.log(squadre)
-
-console.log(squadre.map(x => {
+ const nuoveSquadre = (squadre.map(x => {
     const {nome, punti_fatti} = x
     return {nome, punti_fatti}
+    
 }))
+
+console.log(nuoveSquadre);
